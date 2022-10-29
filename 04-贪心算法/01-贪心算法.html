@@ -1,0 +1,775 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>贪心算法 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../03-排序/01-排序问题.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">数据结构和算法基础</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../00-数据结构和算法基础/01-数组和字符串.html">
+            
+                <a href="../00-数据结构和算法基础/01-数组和字符串.html">
+            
+                    
+                    数组和字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../00-数据结构和算法基础/02-链表.html">
+            
+                <a href="../00-数据结构和算法基础/02-链表.html">
+            
+                    
+                    链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../00-数据结构和算法基础/03-栈和队列.html">
+            
+                <a href="../00-数据结构和算法基础/03-栈和队列.html">
+            
+                    
+                    栈和队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../00-数据结构和算法基础/04-树.html">
+            
+                <a href="../00-数据结构和算法基础/04-树.html">
+            
+                    
+                    树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../00-数据结构和算法基础/05-图.html">
+            
+                <a href="../00-数据结构和算法基础/05-图.html">
+            
+                    
+                    图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../00-数据结构和算法基础/06-堆.html">
+            
+                <a href="../00-数据结构和算法基础/06-堆.html">
+            
+                    
+                    堆
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">枚举部分和递归部分</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../01-枚举部分和递归部分/01-递归实现指数型枚举.html">
+            
+                <a href="../01-枚举部分和递归部分/01-递归实现指数型枚举.html">
+            
+                    
+                    递归实现指数型枚举
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../01-枚举部分和递归部分/02-递归实现排列类型枚举 II.html">
+            
+                <a href="../01-枚举部分和递归部分/02-递归实现排列类型枚举 II.html">
+            
+                    
+                    递归实现排列类型枚举 II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../01-枚举部分和递归部分/03-递归实现组合型枚举 Ⅱ.html">
+            
+                <a href="../01-枚举部分和递归部分/03-递归实现组合型枚举 Ⅱ.html">
+            
+                    
+                    递归实现组合型枚举 Ⅱ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../01-枚举部分和递归部分/04-最大的和.html">
+            
+                <a href="../01-枚举部分和递归部分/04-最大的和.html">
+            
+                    
+                    最大的和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../01-枚举部分和递归部分/05-导弹拦截.html">
+            
+                <a href="../01-枚举部分和递归部分/05-导弹拦截.html">
+            
+                    
+                    导弹拦截
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../01-枚举部分和递归部分/06-珠心算测验.html">
+            
+                <a href="../01-枚举部分和递归部分/06-珠心算测验.html">
+            
+                    
+                    珠心算测验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../01-枚举部分和递归部分/07-龙虎斗.html">
+            
+                <a href="../01-枚举部分和递归部分/07-龙虎斗.html">
+            
+                    
+                    龙虎斗
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../01-枚举部分和递归部分/08-侦探推理.html">
+            
+                <a href="../01-枚举部分和递归部分/08-侦探推理.html">
+            
+                    
+                    侦探推理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../01-枚举部分和递归部分/09-卡米洛特.html">
+            
+                <a href="../01-枚举部分和递归部分/09-卡米洛特.html">
+            
+                    
+                    卡米洛特
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="../01-枚举部分和递归部分/10-三元组.html">
+            
+                <a href="../01-枚举部分和递归部分/10-三元组.html">
+            
+                    
+                    三元组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">双指针思想</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../02-双指针思想/01-双指针.html">
+            
+                <a href="../02-双指针思想/01-双指针.html">
+            
+                    
+                    双指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">排序</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../03-排序/01-排序问题.html">
+            
+                <a href="../03-排序/01-排序问题.html">
+            
+                    
+                    排序问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">贪心算法</li>
+        
+        
+    
+        <li class="chapter active" data-level="5.1" data-path="01-贪心算法.html">
+            
+                <a href="01-贪心算法.html">
+            
+                    
+                    贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">分治</li>
+        
+        
+    
+
+    
+        
+        <li class="header">搜索和回溯</li>
+        
+        
+    
+
+    
+        
+        <li class="header">并查集</li>
+        
+        
+    
+
+    
+        
+        <li class="header">动态规划</li>
+        
+        
+    
+
+    
+        
+        <li class="header">数学知识</li>
+        
+        
+    
+
+    
+        
+        <li class="header">图论</li>
+        
+        
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >贪心算法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x8D2A;&#x5FC3;&#x7B97;&#x6CD5;&#x5C5E;&#x4E8E;&#x662F;&#x90A3;&#x79CD;&#x542C;&#x540D;&#x5B57;&#x5F88;&#x5BB9;&#x6613;&#x7406;&#x89E3;&#x4F46;&#x662F;&#x5B9E;&#x8DF5;&#x8D77;&#x6765;&#x5F88;&#x96BE;&#x7406;&#x89E3;&#x7684;&#x7B97;&#x6CD5;&#x3002;&#x4FDD;&#x8BC1;&#x6BCF;&#x6B21;&#x64CD;&#x4F5C;&#x90FD;&#x662F;&#x5C40;&#x90E8;&#x6700;&#x4F18;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x6700;&#x540E;&#x5F97;&#x5230;&#x7684;&#x7ED3;&#x679C;&#x662F;&#x5168;&#x5C40;&#x6700;&#x4F18;&#x7684;&#x3002;&#x5728;&quot;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x57FA;&#x7840;&quot;&#x7684;&quot;&#x6570;&#x7EC4;&quot;&#x90E8;&#x5206;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x6709;&#x6240;&#x6D89;&#x53CA;&#xFF0C;&#x5982;&quot;&#x65E0;&#x91CD;&#x53E0;&#x533A;&#x95F4;&quot;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<h2 id="1&#x6839;&#x636E;&#x8EAB;&#x9AD8;&#x91CD;&#x5EFA;&#x961F;&#x5217;">1.&#x6839;&#x636E;&#x8EAB;&#x9AD8;&#x91CD;&#x5EFA;&#x961F;&#x5217;</h2>
+<p>link:<a href="https://leetcode.cn/problems/queue-reconstruction-by-height/description/" target="_blank">406. &#x6839;&#x636E;&#x8EAB;&#x9AD8;&#x91CD;&#x5EFA;&#x961F;&#x5217; - &#x529B;&#x6263;&#xFF08;LeetCode&#xFF09;</a></p>
+<h3 id="description">Description</h3>
+<p>&#x5047;&#x8BBE;&#x6709;&#x6253;&#x4E71;&#x987A;&#x5E8F;&#x7684;&#x4E00;&#x7FA4;&#x4EBA;&#x7AD9;&#x6210;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#xFF0C;&#x6570;&#x7EC4; people &#x8868;&#x793A;&#x961F;&#x5217;&#x4E2D;&#x4E00;&#x4E9B;&#x4EBA;&#x7684;&#x5C5E;&#x6027;&#xFF08;&#x4E0D;&#x4E00;&#x5B9A;&#x6309;&#x987A;&#x5E8F;&#xFF09;&#x3002;&#x6BCF;&#x4E2A; people[i] = [hi, ki] &#x8868;&#x793A;&#x7B2C; i &#x4E2A;&#x4EBA;&#x7684;&#x8EAB;&#x9AD8;&#x4E3A; hi &#xFF0C;&#x524D;&#x9762; &#x6B63;&#x597D; &#x6709; ki &#x4E2A;&#x8EAB;&#x9AD8;&#x5927;&#x4E8E;&#x6216;&#x7B49;&#x4E8E; hi &#x7684;&#x4EBA;&#x3002;</p>
+<p>&#x8BF7;&#x4F60;&#x91CD;&#x65B0;&#x6784;&#x9020;&#x5E76;&#x8FD4;&#x56DE;&#x8F93;&#x5165;&#x6570;&#x7EC4; people &#x6240;&#x8868;&#x793A;&#x7684;&#x961F;&#x5217;&#x3002;&#x8FD4;&#x56DE;&#x7684;&#x961F;&#x5217;&#x5E94;&#x8BE5;&#x683C;&#x5F0F;&#x5316;&#x4E3A;&#x6570;&#x7EC4; queue &#xFF0C;&#x5176;&#x4E2D; queue[j] = [hj, kj] &#x662F;&#x961F;&#x5217;&#x4E2D;&#x7B2C; j &#x4E2A;&#x4EBA;&#x7684;&#x5C5E;&#x6027;&#xFF08;queue[0] &#x662F;&#x6392;&#x5728;&#x961F;&#x5217;&#x524D;&#x9762;&#x7684;&#x4EBA;&#xFF09;&#x3002;</p>
+<p>&#x793A;&#x4F8B; 1&#xFF1A;</p>
+<p>&#x8F93;&#x5165;&#xFF1A;people = [[7,0],[4,4],[7,1],[5,0],[6,1],[5,2]]
+&#x8F93;&#x51FA;&#xFF1A;[[5,0],[7,0],[5,2],[6,1],[4,4],[7,1]]
+&#x89E3;&#x91CA;&#xFF1A;
+&#x7F16;&#x53F7;&#x4E3A; 0 &#x7684;&#x4EBA;&#x8EAB;&#x9AD8;&#x4E3A; 5 &#xFF0C;&#x6CA1;&#x6709;&#x8EAB;&#x9AD8;&#x66F4;&#x9AD8;&#x6216;&#x8005;&#x76F8;&#x540C;&#x7684;&#x4EBA;&#x6392;&#x5728;&#x4ED6;&#x524D;&#x9762;&#x3002;
+&#x7F16;&#x53F7;&#x4E3A; 1 &#x7684;&#x4EBA;&#x8EAB;&#x9AD8;&#x4E3A; 7 &#xFF0C;&#x6CA1;&#x6709;&#x8EAB;&#x9AD8;&#x66F4;&#x9AD8;&#x6216;&#x8005;&#x76F8;&#x540C;&#x7684;&#x4EBA;&#x6392;&#x5728;&#x4ED6;&#x524D;&#x9762;&#x3002;
+&#x7F16;&#x53F7;&#x4E3A; 2 &#x7684;&#x4EBA;&#x8EAB;&#x9AD8;&#x4E3A; 5 &#xFF0C;&#x6709; 2 &#x4E2A;&#x8EAB;&#x9AD8;&#x66F4;&#x9AD8;&#x6216;&#x8005;&#x76F8;&#x540C;&#x7684;&#x4EBA;&#x6392;&#x5728;&#x4ED6;&#x524D;&#x9762;&#xFF0C;&#x5373;&#x7F16;&#x53F7;&#x4E3A; 0 &#x548C; 1 &#x7684;&#x4EBA;&#x3002;
+&#x7F16;&#x53F7;&#x4E3A; 3 &#x7684;&#x4EBA;&#x8EAB;&#x9AD8;&#x4E3A; 6 &#xFF0C;&#x6709; 1 &#x4E2A;&#x8EAB;&#x9AD8;&#x66F4;&#x9AD8;&#x6216;&#x8005;&#x76F8;&#x540C;&#x7684;&#x4EBA;&#x6392;&#x5728;&#x4ED6;&#x524D;&#x9762;&#xFF0C;&#x5373;&#x7F16;&#x53F7;&#x4E3A; 1 &#x7684;&#x4EBA;&#x3002;
+&#x7F16;&#x53F7;&#x4E3A; 4 &#x7684;&#x4EBA;&#x8EAB;&#x9AD8;&#x4E3A; 4 &#xFF0C;&#x6709; 4 &#x4E2A;&#x8EAB;&#x9AD8;&#x66F4;&#x9AD8;&#x6216;&#x8005;&#x76F8;&#x540C;&#x7684;&#x4EBA;&#x6392;&#x5728;&#x4ED6;&#x524D;&#x9762;&#xFF0C;&#x5373;&#x7F16;&#x53F7;&#x4E3A; 0&#x3001;1&#x3001;2&#x3001;3 &#x7684;&#x4EBA;&#x3002;
+&#x7F16;&#x53F7;&#x4E3A; 5 &#x7684;&#x4EBA;&#x8EAB;&#x9AD8;&#x4E3A; 7 &#xFF0C;&#x6709; 1 &#x4E2A;&#x8EAB;&#x9AD8;&#x66F4;&#x9AD8;&#x6216;&#x8005;&#x76F8;&#x540C;&#x7684;&#x4EBA;&#x6392;&#x5728;&#x4ED6;&#x524D;&#x9762;&#xFF0C;&#x5373;&#x7F16;&#x53F7;&#x4E3A; 1 &#x7684;&#x4EBA;&#x3002;
+&#x56E0;&#x6B64; [[5,0],[7,0],[5,2],[6,1],[4,4],[7,1]] &#x662F;&#x91CD;&#x65B0;&#x6784;&#x9020;&#x540E;&#x7684;&#x961F;&#x5217;&#x3002;
+&#x793A;&#x4F8B; 2&#xFF1A;</p>
+<p>&#x8F93;&#x5165;&#xFF1A;people = [[6,0],[5,0],[4,0],[3,2],[2,2],[1,4]]
+&#x8F93;&#x51FA;&#xFF1A;[[4,0],[5,0],[2,2],[3,2],[1,4],[6,0]]</p>
+<h3 id="solution">Solution</h3>
+<p>&#x672C;&#x9898;&#x7684;&#x9898;&#x610F;&#x662F;&#x4FDD;&#x6301;&#x539F;&#x6570;&#x7EC4;people&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x4E0D;&#x53D8;&#xFF0C;&#x7136;&#x540E;&#x91CD;&#x65B0;&#x7ED9;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x627E;&#x4F4D;&#x7F6E;&#xFF0C;&#x4F7F;&#x5F97;&#x7F16;&#x53F7;&#x4E3A;i&#x7684;&#x4EBA;&#x524D;&#x9762;&#x7AD9;&#x7740;&#x7684;&#x4E0D;&#x6BD4;TA&#x77EE;&#x7684;&#x4EBA;&#x6B63;&#x597D;&#x4E3A;people[1]&#x4E2A;&#x3002;</p>
+<p>&#x672C;&#x9898;&#x65E2;&#x53EF;&#x4EE5;&#x5148;&#x5B89;&#x6392;&#x4E2A;&#x5B50;&#x9AD8;&#x7684;&#x4EBA;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5148;&#x5B89;&#x6392;&#x4E2A;&#x5B50;&#x4F4E;&#x7684;&#x4EBA;&#x3002;&#x8FD9;&#x91CC;&#x5EFA;&#x8BAE;&#x5148;&#x5B89;&#x6392;&#x4E2A;&#x5B50;&#x4F4E;&#x7684;&#x4EBA;&#xFF0C;&#x56E0;&#x4E3A;&#x5148;&#x5B89;&#x6392;&#x4E2A;&#x5B50;&#x9AD8;&#x7684;&#x4EBA;&#x4F1A;&#x4F7F;&#x7528;&#x66F4;&#x591A;&#x6B21;&quot;&#x63D2;&#x7A7A;&quot;&#x64CD;&#x4F5C;&#x3002;&#x8FD9;&#x91CC;&#x4EE5;&#x5148;&#x5B89;&#x6392;&#x77EE;&#x4E2A;&#x5B50;&#x4E3A;&#x4F8B;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x5B89;&#x6392;&#x521A;&#x521A;&#x6392;&#x5E8F;&#x597D;&#x7684;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x56E0;&#x4E3A;&#x9664;&#x4E86;&#x5B83;&#x4E4B;&#x5916;&#x6240;&#x6709;&#x7684;&#x4EBA;&#x90FD;&#x4E0D;&#x6BD4;TA&#x77EE;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x7684;&#x4F4D;&#x7F6E;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x786E;&#x5B9A;&#x3002;</p>
+<p>&#x7136;&#x540E;&#x5B89;&#x6392;&#x7B2C;&#x4E8C;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x7531;&#x4E8E;<strong>&#x9664;&#x4E86;&#x4E4B;&#x540E;&#x5B89;&#x6392;&#x7684;&#x5143;&#x7D20;&#x548C;&#x5B83;&#x4E4B;&#x5916;&#x6240;&#x6709;&#x7684;&#x4EBA;&#x90FD;&#x4E0D;&#x6BD4;TA&#x77EE;</strong>&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x7684;&#x4F4D;&#x7F6E;&#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x786E;&#x5B9A;&#x3002;</p>
+<p>&#x540E;&#x9762;&#x7684;&#x5143;&#x7D20;&#x4E5F;&#x662F;&#x5982;&#x6B64;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x5148;&#x5B89;&#x6392;&#x4E2A;&#x5B50;&#x6700;&#x4F4E;&#x7684;&#x4EBA;&#xFF0C;&#x90A3;&#x4E48;&#x9700;&#x8981;&#x9996;&#x5148;&#x6839;&#x636E;&#x4E2A;&#x5B50;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#x3002;&#x5982;&#x679C;&#x4E2A;&#x5B50;&#x76F8;&#x540C;&#xFF0C;&#x8BE5;&#x600E;&#x4E48;&#x5904;&#x7406;&#x5462;&#xFF1F;&#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#xFF0C;&#x5982;&#x679C;&#x4E2A;&#x5B50;&#x76F8;&#x540C;&#xFF0C;&#x90A3;&#x4E48;k&#x503C;&#x8F83;&#x5927;&#x7684;&#x4EBA;&#x4F1A;&#x88AB;&#x5B89;&#x6392;&#x5728;&#x540E;&#x9762;&#x3002;&#x5982;&#x679C;&#x5148;&#x5B89;&#x6392;k&#x503C;&#x8F83;&#x5C0F;&#x7684;&#xFF0C;&#x5728;&#x5B89;&#x6392;k&#x503C;&#x8F83;&#x5927;&#x7684;&#x5143;&#x7D20;&#x65F6;&#xFF0C;&#x4E0D;&#x80FD;&#x4FDD;&#x8BC1;&#x9664;&#x4E86;&#x4E4B;&#x540E;&#x5B89;&#x6392;&#x7684;&#x5143;&#x7D20;&#x548C;&#x5B83;&#x4E4B;&#x5916;&#x6240;&#x6709;&#x7684;&#x4EBA;&#x90FD;&#x4E0D;&#x6BD4;TA&#x77EE;&#xFF0C;&#x5728;&#x8003;&#x5BDF;TA&#x7684;&#x4F4D;&#x7F6E;&#x65F6;&#x4F1A;&#x8003;&#x5BDF;&#x5230;&#x521A;&#x521A;&#x5B89;&#x6392;&#x7684;k&#x503C;&#x8F83;&#x5C0F;&#x7684;&#x5143;&#x7D20;&#x3002;&#x5982;&#x679C;&#x5148;&#x5B89;&#x6392;k&#x503C;&#x8F83;&#x5927;&#x7684;&#xFF0C;&#x5728;&#x5B89;&#x6392;k&#x503C;&#x8F83;&#x5C0F;&#x7684;&#x5143;&#x7D20;&#x65F6;&#xFF0C;&#x7531;&#x4E8E;&#x6B63;&#x5728;&#x5B89;&#x6392;&#x7684;&#x5143;&#x7D20;&#x4E00;&#x5B9A;&#x6392;&#x5728;&#x521A;&#x521A;&#x5B89;&#x6392;&#x7684;k&#x503C;&#x8F83;&#x5927;&#x7684;&#x5143;&#x7D20;&#x4E4B;&#x524D;&#xFF0C;&#x6240;&#x4EE5;&#x5BFB;&#x627E;&#x4F4D;&#x7F6E;&#x65F6;&#x4E00;&#x5B9A;&#x4E0D;&#x4F1A;&#x6D89;&#x53CA;&#x5230;&#x521A;&#x521A;&#x5B89;&#x6392;&#x7684;k&#x503C;&#x8F83;&#x5927;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x5728;TA&#x8003;&#x5BDF;&#x7684;&#x533A;&#x95F4;&#x5185;&#x7B49;&#x4EF7;&#x4E8E;&#x9664;&#x4E86;&#x4E4B;&#x540E;&#x5B89;&#x6392;&#x7684;&#x5143;&#x7D20;&#x548C;&#x5B83;&#x4E4B;&#x5916;&#x6240;&#x6709;&#x7684;&#x4EBA;&#x90FD;&#x4E0D;&#x6BD4;TA&#x77EE;&#xFF0C;&#x6240;&#x4EE5;&#x5404;&#x81EA;&#x76F8;&#x540C;&#x65F6;&#xFF0C;&#x5E94;&#x8BE5;&#x5148;&#x5B89;&#x6392;k&#x8F83;&#x5927;&#x7684;&#x3002;</p>
+<p>&#x672C;&#x9898;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3B;&#x8981;&#x5728;&#x6392;&#x5E8F;&#x548C;&#x63D2;&#x5165;&#x4E0A;&#xFF0C;&#x6392;&#x5E8F;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x662F;$O(nlogn)$&#xFF0C;&#x63D2;&#x5165;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x662F;$O(n^2)$&#x6240;&#x4EE5;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x662F;$O(n^2)$&#x3002;</p>
+<h3 id="code">Code</h3>
+<pre><code class="lang-c++"><span class="hljs-keyword">class</span> Solution1 {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&gt; reconstructQueue(<span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&gt;&amp; people) {
+        <span class="hljs-comment">//1.sort</span>
+        sort(people.begin(), people.end(), [](<span class="hljs-keyword">const</span> <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; a, <span class="hljs-keyword">const</span> <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; b) {
+            <span class="hljs-keyword">return</span> a[<span class="hljs-number">0</span>] &lt; b[<span class="hljs-number">0</span>] || (a[<span class="hljs-number">0</span>] == b[<span class="hljs-number">0</span>] &amp;&amp; a[<span class="hljs-number">1</span>] &gt; b[<span class="hljs-number">1</span>]);
+            });
+        <span class="hljs-keyword">int</span> length = people.size();
+        <span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&gt; result(length);
+        <span class="hljs-comment">//2.arrange people from low to high</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; length; i++)
+        {
+            <span class="hljs-keyword">int</span> position = people[i][<span class="hljs-number">1</span>] + <span class="hljs-number">1</span>;<span class="hljs-comment">//there are i people higher than people_i</span>
+            <span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;<span class="hljs-comment">//count for the position unarranged before people_i</span>
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; length; j++)
+            {
+                <span class="hljs-keyword">if</span> (result[j].empty())
+                {
+                    count++;
+                }
+                <span class="hljs-keyword">if</span> (count == position)
+                {
+                    result[j] = people[i];
+                    <span class="hljs-keyword">break</span>;
+                }
+            }
+        }
+        <span class="hljs-comment">//3.return </span>
+        <span class="hljs-keyword">return</span> result;
+    }
+};
+</code></pre>
+<h2 id="2&#x4E70;&#x5356;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x65F6;&#x673A;">2.&#x4E70;&#x5356;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x65F6;&#x673A;</h2>
+<p>link:<a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/" target="_blank">121. &#x4E70;&#x5356;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x65F6;&#x673A; - &#x529B;&#x6263;&#xFF08;LeetCode&#xFF09;</a></p>
+<h3 id="description">Description</h3>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x6570;&#x7EC4; prices &#xFF0C;&#x5B83;&#x7684;&#x7B2C; i &#x4E2A;&#x5143;&#x7D20; prices[i] &#x8868;&#x793A;&#x4E00;&#x652F;&#x7ED9;&#x5B9A;&#x80A1;&#x7968;&#x7B2C; i &#x5929;&#x7684;&#x4EF7;&#x683C;&#x3002;</p>
+<p>&#x4F60;&#x53EA;&#x80FD;&#x9009;&#x62E9; &#x67D0;&#x4E00;&#x5929; &#x4E70;&#x5165;&#x8FD9;&#x53EA;&#x80A1;&#x7968;&#xFF0C;&#x5E76;&#x9009;&#x62E9;&#x5728; &#x672A;&#x6765;&#x7684;&#x67D0;&#x4E00;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x65E5;&#x5B50; &#x5356;&#x51FA;&#x8BE5;&#x80A1;&#x7968;&#x3002;&#x8BBE;&#x8BA1;&#x4E00;&#x4E2A;&#x7B97;&#x6CD5;&#x6765;&#x8BA1;&#x7B97;&#x4F60;&#x6240;&#x80FD;&#x83B7;&#x53D6;&#x7684;&#x6700;&#x5927;&#x5229;&#x6DA6;&#x3002;</p>
+<p>&#x8FD4;&#x56DE;&#x4F60;&#x53EF;&#x4EE5;&#x4ECE;&#x8FD9;&#x7B14;&#x4EA4;&#x6613;&#x4E2D;&#x83B7;&#x53D6;&#x7684;&#x6700;&#x5927;&#x5229;&#x6DA6;&#x3002;&#x5982;&#x679C;&#x4F60;&#x4E0D;&#x80FD;&#x83B7;&#x53D6;&#x4EFB;&#x4F55;&#x5229;&#x6DA6;&#xFF0C;&#x8FD4;&#x56DE; 0 &#x3002;</p>
+<p>&#x793A;&#x4F8B; 1&#xFF1A;</p>
+<p>&#x8F93;&#x5165;&#xFF1A;[7,1,5,3,6,4]
+&#x8F93;&#x51FA;&#xFF1A;5
+&#x89E3;&#x91CA;&#xFF1A;&#x5728;&#x7B2C; 2 &#x5929;&#xFF08;&#x80A1;&#x7968;&#x4EF7;&#x683C; = 1&#xFF09;&#x7684;&#x65F6;&#x5019;&#x4E70;&#x5165;&#xFF0C;&#x5728;&#x7B2C; 5 &#x5929;&#xFF08;&#x80A1;&#x7968;&#x4EF7;&#x683C; = 6&#xFF09;&#x7684;&#x65F6;&#x5019;&#x5356;&#x51FA;&#xFF0C;&#x6700;&#x5927;&#x5229;&#x6DA6; = 6-1 = 5 &#x3002;
+     &#x6CE8;&#x610F;&#x5229;&#x6DA6;&#x4E0D;&#x80FD;&#x662F; 7-1 = 6, &#x56E0;&#x4E3A;&#x5356;&#x51FA;&#x4EF7;&#x683C;&#x9700;&#x8981;&#x5927;&#x4E8E;&#x4E70;&#x5165;&#x4EF7;&#x683C;&#xFF1B;&#x540C;&#x65F6;&#xFF0C;&#x4F60;&#x4E0D;&#x80FD;&#x5728;&#x4E70;&#x5165;&#x524D;&#x5356;&#x51FA;&#x80A1;&#x7968;&#x3002;
+&#x793A;&#x4F8B; 2&#xFF1A;</p>
+<p>&#x8F93;&#x5165;&#xFF1A;prices = [7,6,4,3,1]
+&#x8F93;&#x51FA;&#xFF1A;0
+&#x89E3;&#x91CA;&#xFF1A;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;, &#x6CA1;&#x6709;&#x4EA4;&#x6613;&#x5B8C;&#x6210;, &#x6240;&#x4EE5;&#x6700;&#x5927;&#x5229;&#x6DA6;&#x4E3A; 0&#x3002;</p>
+<h3 id="solution">Solution</h3>
+<p>&#x672C;&#x9898;&#x662F;&#x8981;&#x6C42;i,j(i&lt;j),&#x4F7F;&#x5F97;price[j]-price[i]&#x6700;&#x5927;&#xFF0C;&#x6700;&#x5BB9;&#x6613;&#x60F3;&#x5230;&#x7684;&#x5C31;&#x662F;&#x904D;&#x5386;$O(n^2)$&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x4F46;&#x662F;&#x9700;&#x8981;&#x505A;&#x91CD;&#x590D;&#x8FD0;&#x7B97;&#x3002;&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x56E0;&#x4E3A;&#x6BCF;&#x6B21;&#x6C42;&#x8FD9;&#x4E2A;&#x6700;&#x5927;&#x503C;&#xFF0C;&#x662F;&#x62FF;&#x5F53;&#x524D;&#x80A1;&#x7968;&#x7684;&#x4EF7;&#x683C;&#x548C;&#x524D;&#x9762;&#x6700;&#x4F4E;&#x7684;&#x4EF7;&#x683C;&#x6BD4;&#x8F83;&#xFF0C;&#x6240;&#x4EE5;&#x53EA;&#x9700;&#x8981;&#x62FF;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x8BB0;&#x5F55;&#x4E00;&#x4E0B;&#x8BE5;&#x5143;&#x7D20;&#x4E4B;&#x524D;&#x7684;&#x6700;&#x4F4E;&#x4EF7;&#x683C;&#x5C31;&#x597D;&#xFF0C;&#x8FD9;&#x6837;&#x53EA;&#x9700;&#x8981;&#x4E00;&#x6B21;&#x904D;&#x5386;&#x5373;&#x53EF;&#x5B8C;&#x6210;&#x4EFB;&#x52A1;&#x3002;</p>
+<h3 id="code">Code</h3>
+<pre><code class="lang-c++"><span class="hljs-keyword">class</span> Solution2 {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">maxProfit</span><span class="hljs-params">(<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; prices)</span> </span>{
+        <span class="hljs-keyword">int</span> length = prices.size();
+        <span class="hljs-keyword">int</span> lowestPrice=<span class="hljs-number">0x3f3f3f3f</span>;
+        <span class="hljs-keyword">int</span> maxprofit = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; length; i++)
+        {
+            <span class="hljs-keyword">if</span> (lowestPrice &gt;= prices[i]) lowestPrice = prices[i];
+            maxprofit = maxprofit &gt; prices[i] - lowestPrice ? maxprofit : prices[i] - lowestPrice;
+        }
+        <span class="hljs-keyword">return</span> maxprofit;
+    }
+};
+</code></pre>
+<h2 id="3&#x4E70;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x65F6;&#x673A;&#x2171;">3.&#x4E70;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x65F6;&#x673A;&#x2161;</h2>
+<p>link:<a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/description/" target="_blank">122. &#x4E70;&#x5356;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x65F6;&#x673A; II - &#x529B;&#x6263;&#xFF08;LeetCode&#xFF09;</a></p>
+<h3 id="description">Description</h3>
+<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x6570;&#x7EC4; prices &#xFF0C;&#x5176;&#x4E2D; prices[i] &#x8868;&#x793A;&#x67D0;&#x652F;&#x80A1;&#x7968;&#x7B2C; i &#x5929;&#x7684;&#x4EF7;&#x683C;&#x3002;</p>
+<p>&#x5728;&#x6BCF;&#x4E00;&#x5929;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x8D2D;&#x4E70;&#x548C;/&#x6216;&#x51FA;&#x552E;&#x80A1;&#x7968;&#x3002;&#x4F60;&#x5728;&#x4EFB;&#x4F55;&#x65F6;&#x5019; &#x6700;&#x591A; &#x53EA;&#x80FD;&#x6301;&#x6709; &#x4E00;&#x80A1; &#x80A1;&#x7968;&#x3002;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x5148;&#x8D2D;&#x4E70;&#xFF0C;&#x7136;&#x540E;&#x5728; &#x540C;&#x4E00;&#x5929; &#x51FA;&#x552E;&#x3002;</p>
+<p>&#x8FD4;&#x56DE; &#x4F60;&#x80FD;&#x83B7;&#x5F97;&#x7684; &#x6700;&#x5927; &#x5229;&#x6DA6; &#x3002;</p>
+<p>&#x793A;&#x4F8B; 1&#xFF1A;</p>
+<p>&#x8F93;&#x5165;&#xFF1A;prices = [7,1,5,3,6,4]
+&#x8F93;&#x51FA;&#xFF1A;7
+&#x89E3;&#x91CA;&#xFF1A;&#x5728;&#x7B2C; 2 &#x5929;&#xFF08;&#x80A1;&#x7968;&#x4EF7;&#x683C; = 1&#xFF09;&#x7684;&#x65F6;&#x5019;&#x4E70;&#x5165;&#xFF0C;&#x5728;&#x7B2C; 3 &#x5929;&#xFF08;&#x80A1;&#x7968;&#x4EF7;&#x683C; = 5&#xFF09;&#x7684;&#x65F6;&#x5019;&#x5356;&#x51FA;, &#x8FD9;&#x7B14;&#x4EA4;&#x6613;&#x6240;&#x80FD;&#x83B7;&#x5F97;&#x5229;&#x6DA6; = 5 - 1 = 4 &#x3002;
+     &#x968F;&#x540E;&#xFF0C;&#x5728;&#x7B2C; 4 &#x5929;&#xFF08;&#x80A1;&#x7968;&#x4EF7;&#x683C; = 3&#xFF09;&#x7684;&#x65F6;&#x5019;&#x4E70;&#x5165;&#xFF0C;&#x5728;&#x7B2C; 5 &#x5929;&#xFF08;&#x80A1;&#x7968;&#x4EF7;&#x683C; = 6&#xFF09;&#x7684;&#x65F6;&#x5019;&#x5356;&#x51FA;, &#x8FD9;&#x7B14;&#x4EA4;&#x6613;&#x6240;&#x80FD;&#x83B7;&#x5F97;&#x5229;&#x6DA6; = 6 - 3 = 3 &#x3002;
+     &#x603B;&#x5229;&#x6DA6;&#x4E3A; 4 + 3 = 7 &#x3002;
+&#x793A;&#x4F8B; 2&#xFF1A;</p>
+<p>&#x8F93;&#x5165;&#xFF1A;prices = [1,2,3,4,5]
+&#x8F93;&#x51FA;&#xFF1A;4
+&#x89E3;&#x91CA;&#xFF1A;&#x5728;&#x7B2C; 1 &#x5929;&#xFF08;&#x80A1;&#x7968;&#x4EF7;&#x683C; = 1&#xFF09;&#x7684;&#x65F6;&#x5019;&#x4E70;&#x5165;&#xFF0C;&#x5728;&#x7B2C; 5 &#x5929; &#xFF08;&#x80A1;&#x7968;&#x4EF7;&#x683C; = 5&#xFF09;&#x7684;&#x65F6;&#x5019;&#x5356;&#x51FA;, &#x8FD9;&#x7B14;&#x4EA4;&#x6613;&#x6240;&#x80FD;&#x83B7;&#x5F97;&#x5229;&#x6DA6; = 5 - 1 = 4 &#x3002;
+     &#x603B;&#x5229;&#x6DA6;&#x4E3A; 4 &#x3002;
+&#x793A;&#x4F8B; 3&#xFF1A;</p>
+<p>&#x8F93;&#x5165;&#xFF1A;prices = [7,6,4,3,1]
+&#x8F93;&#x51FA;&#xFF1A;0
+&#x89E3;&#x91CA;&#xFF1A;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;, &#x4EA4;&#x6613;&#x65E0;&#x6CD5;&#x83B7;&#x5F97;&#x6B63;&#x5229;&#x6DA6;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x53C2;&#x4E0E;&#x4EA4;&#x6613;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x6700;&#x5927;&#x5229;&#x6DA6;&#xFF0C;&#x6700;&#x5927;&#x5229;&#x6DA6;&#x4E3A; 0 &#x3002;</p>
+<h3 id="solution">Solution</h3>
+<p>&#x672C;&#x9898;&#x548C;&#x4E0A;&#x4E00;&#x9898;&#x5F88;&#x50CF;&#xFF0C;&#x4E0D;&#x540C;&#x4E4B;&#x5904;&#x5728;&#x4E8E;&#x53EF;&#x4EE5;&#x591A;&#x6B21;&#x8D2D;&#x4E70;/&#x552E;&#x51FA;&#xFF0C;&#x5E76;&#x4E14;&#x6709;&#x4E86;&#x540C;&#x65F6;&#x6700;&#x591A;&#x53EF;&#x6301;&#x6709;&#x4E00;&#x5F20;&#x80A1;&#x7968;&#x7684;&#x9650;&#x5236;&#x3002;&#x672C;&#x8D28;&#x4E0A;&#x662F;&#x628A;&#x4E0A;&#x4E00;&#x9898;&#x7684;&#x5DEE;&#x503C;&#x6362;&#x6210;&#x4E86;&#x591A;&#x4E2A;&#x5B50;&#x533A;&#x95F4;&#x7684;&#x5DEE;&#x503C;&#x7684;&#x548C;&#x4E14;&#x5404;&#x4E2A;&#x5B50;&#x533A;&#x95F4;&#x4E0D;&#x53EF;&#x76F8;&#x4E92;&#x903E;&#x8D8A;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x5C31;&#x662F;&#x5728;&#x6C42;&#x6240;&#x6709;&#x7684;&#x4E0A;&#x5347;&#x5B50;&#x533A;&#x95F4;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x4E00;&#x4E2A;&#x8FDE;&#x7EED;&#x7684;&#x4E0A;&#x5347;&#x5B50;&#x533A;&#x95F4;&#x53EF;&#x4EE5;&#x770B;&#x4F5C;&#x591A;&#x4E2A;&#x957F;&#x5EA6;&#x4E3A;2&#x7684;&#x4E0A;&#x5347;&#x5B50;&#x533A;&#x95F4;&#xFF0C;&#x4F8B;&#x5982;&#x6848;&#x4F8B;&#x8F93;&#x5165;2&#x4E2D;&#x7684;[1,5]&#x53EF;&#x4EE5;&#x770B;&#x4F5C;[1,2],[2,3],&#x2026;&#x2026;,[4,5]&#x3002;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8003;&#x5BDF;&#x6BCF;&#x4E00;&#x4E2A;&#x76F8;&#x90BB;&#x5143;&#x7D20;&#x7684;&#x5DEE;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x5DEE;&#x503C;&#xFF1E;0&#x90A3;&#x4E48;&#x628A;&#x4ED6;&#x52A0;&#x5165;&#x5230;&#x6536;&#x76CA;&#x4E2D;&#x3002;</p>
+<h3 id="code">Code</h3>
+<pre><code class="lang-c++"><span class="hljs-keyword">class</span> Solution3 {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">maxProfit</span><span class="hljs-params">(<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; prices)</span> </span>{
+        <span class="hljs-keyword">int</span> length = prices.size();
+        <span class="hljs-keyword">int</span> maxprofit = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; length; i++)
+        {
+            <span class="hljs-keyword">if</span> (prices[i] - prices[i - <span class="hljs-number">1</span>] &gt; <span class="hljs-number">0</span>) maxprofit += prices[i] - prices[i - <span class="hljs-number">1</span>];
+        }
+        <span class="hljs-keyword">return</span> maxprofit;
+    }
+};
+</code></pre>
+<h2 id="4&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x5B50;&#x5E8F;&#x5217;">4.&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x5B50;&#x5E8F;&#x5217;</h2>
+<p>link:<a href="https://leetcode.cn/problems/is-subsequence/" target="_blank">392. &#x5224;&#x65AD;&#x5B50;&#x5E8F;&#x5217; - &#x529B;&#x6263;&#xFF08;LeetCode&#xFF09;</a></p>
+<h3 id="description">Description</h3>
+<p>&#x7ED9;&#x5B9A;&#x5B57;&#x7B26;&#x4E32; s &#x548C; t &#xFF0C;&#x5224;&#x65AD; s &#x662F;&#x5426;&#x4E3A; t &#x7684;&#x5B50;&#x5E8F;&#x5217;&#x3002;</p>
+<p>&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x4E00;&#x4E2A;&#x5B50;&#x5E8F;&#x5217;&#x662F;&#x539F;&#x59CB;&#x5B57;&#x7B26;&#x4E32;&#x5220;&#x9664;&#x4E00;&#x4E9B;&#xFF08;&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x5220;&#x9664;&#xFF09;&#x5B57;&#x7B26;&#x800C;&#x4E0D;&#x6539;&#x53D8;&#x5269;&#x4F59;&#x5B57;&#x7B26;&#x76F8;&#x5BF9;&#x4F4D;&#x7F6E;&#x5F62;&#x6210;&#x7684;&#x65B0;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;&quot;ace&quot;&#x662F;&quot;abcde&quot;&#x7684;&#x4E00;&#x4E2A;&#x5B50;&#x5E8F;&#x5217;&#xFF0C;&#x800C;&quot;aec&quot;&#x4E0D;&#x662F;&#xFF09;&#x3002;</p>
+<p>&#x8FDB;&#x9636;&#xFF1A;</p>
+<p>&#x5982;&#x679C;&#x6709;&#x5927;&#x91CF;&#x8F93;&#x5165;&#x7684; S&#xFF0C;&#x79F0;&#x4F5C; S1, S2, ... , Sk &#x5176;&#x4E2D; k &gt;= 10&#x4EBF;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x4F9D;&#x6B21;&#x68C0;&#x67E5;&#x5B83;&#x4EEC;&#x662F;&#x5426;&#x4E3A; T &#x7684;&#x5B50;&#x5E8F;&#x5217;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F60;&#x4F1A;&#x600E;&#x6837;&#x6539;&#x53D8;&#x4EE3;&#x7801;&#xFF1F;</p>
+<p>&#x81F4;&#x8C22;&#xFF1A;</p>
+<p>&#x7279;&#x522B;&#x611F;&#x8C22; @pbrother &#x6DFB;&#x52A0;&#x6B64;&#x95EE;&#x9898;&#x5E76;&#x4E14;&#x521B;&#x5EFA;&#x6240;&#x6709;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x3002;</p>
+<p>&#x793A;&#x4F8B; 1&#xFF1A;</p>
+<p>&#x8F93;&#x5165;&#xFF1A;s = &quot;abc&quot;, t = &quot;ahbgdc&quot;
+&#x8F93;&#x51FA;&#xFF1A;true
+&#x793A;&#x4F8B; 2&#xFF1A;</p>
+<p>&#x8F93;&#x5165;&#xFF1A;s = &quot;axc&quot;, t = &quot;ahbgdc&quot;
+&#x8F93;&#x51FA;&#xFF1A;false</p>
+<h3 id="solution">Solution</h3>
+<p>&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5339;&#x914D;&#x7B97;&#x6CD5;&#x662F;&#x975E;&#x5E38;&#x7ECF;&#x5178;&#x7684;&#x8D2A;&#x5FC3;&#x7B97;&#x6CD5;&#xFF0C;&#x8FD9;&#x91CC;&#x8FD8;&#x7528;&#x5230;&#x4E86;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x7684;&#x601D;&#x60F3;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x66B4;&#x529B;&#x5339;&#x914D;&#x7684;&#x7B97;&#x6CD5;&#x5F00;&#x59CB;&#x8BF4;&#x8D77;&#xFF0C;&#x5BF9;&#x4E8E;&#x66B4;&#x529B;&#x5339;&#x914D;&#x7B97;&#x6CD5;&#xFF0C;&#x5982;&#x679C;&#x5728;&#x67D0;&#x4E00;&#x6B21;&#x5339;&#x914D;&#x4E2D;&#xFF0C;s&#x4E2D;&#x7684;&#x5B57;&#x7B26;&#x548C;t&#x4E2D;&#x7684;&#x5B57;&#x7B26;&#x4E0D;&#x540C;&#xFF0C;&#x90A3;&#x4E48;s&#x7684;&#x6307;&#x9488;&#x56DE;&#x9000;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;t&#x7684;&#x6307;&#x9488;&#x56DE;&#x9000;&#x5230;&#x672C;&#x6B21;&#x5B57;&#x7B26;&#x4E32;&#x5339;&#x914D;&#x4F4D;&#x7F6E;&#x7684;&#x5F00;&#x5934;&#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#xFF0C;&#x5982;&#x56FE;&#x6240;&#x793A;&#xFF0C;&#x8FD9;&#x6837;&#x663E;&#x7136;&#x6709;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x8FD0;&#x7B97;&#xFF0C;&#x663E;&#x5F97;&#x5F88;&#x5446;&#x3002;</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wuyun666/chartBed@main/img/image-20220823180321778.png" alt="image-20220823180321778"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wuyun666/chartBed@main/img/image-20220823180404914.png" alt="image-20220823180404914"></p>
+<p>&#x66B4;&#x529B;&#x7B97;&#x6CD5;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x662F;$O(MN)$,&#x5176;&#x4E2D;M&#x3001;N&#x5206;&#x522B;&#x662F;&#x4E32;s&#x548C;t&#x7684;&#x957F;&#x5EA6;&#x3002;</p>
+<p>&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E32;s&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x8D2A;&#x5FC3;&#x5730;&#x5BFB;&#x627E;&#x4E32;t&#x4E2D;&#x7B2C;&#x4E00;&#x4E2A;&#x548C;&#x5B83;&#x76F8;&#x540C;&#x7684;&#x5B57;&#x7B26;&#x5373;&#x53EF;&#xFF0C;&#x5B83;&#x7684;&#x4F4D;&#x7F6E;&#x8BB0;&#x4E3A;i&#x3002;&#x5BF9;&#x4E8E;&#x4E32;s&#x4E2D;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x53EA;&#x9700;&#x8981;&#x8D2A;&#x5FC3;&#x5730;&#x5BFB;&#x627E;&#x4E32;t&#x4E2D;i&#x4E4B;&#x540E;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x548C;&#x5B83;&#x76F8;&#x540C;&#x7684;&#x5B57;&#x7B26;&#x5373;&#x53EF;&#xFF0C;&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x5173;&#x952E;&#x662F;&#x8981;&#x83B7;&#x53D6;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x5B83;&#x5305;&#x542B;&#x5B57;&#x7B26;ch&#x5728;&#x4E32;t&#x7684;&#x4F4D;&#x7F6E;i&#x4E4B;&#x540E;&#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x6240;&#x5728;&#x7684;&#x4F4D;&#x7F6E;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x5982;$next[ch][i]=j$&#x8BF4;&#x660E;&#x5728;&#x4E32;t&#x7684;&#x4F4D;&#x7F6E;i&#x4E4B;&#x540E;&#xFF0C;&#x5B57;&#x7B26;ch&#x4E0B;&#x4E00;&#x6B21;&#x51FA;&#x73B0;&#x7684;&#x4F4D;&#x7F6E;&#x662F;j&#x3002;</p>
+<p>&#x8FD9;&#x6837;&#x8D2A;&#x5FC3;&#x7684;&#x5339;&#x914D;&#xFF0C;&#x76F4;&#x5230;&#x4E32;s&#x5339;&#x914D;&#x6210;&#x529F;&#x4E3A;&#x6B62;&#xFF0C;&#x65F6;&#x95F4;&#x5F00;&#x9500;&#x4E3B;&#x8981;&#x5728;&#x6784;&#x5EFA;&#x6570;&#x7EC4;&#x4E0A;&#xFF0C;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;O(N)&#x3002;</p>
+<h3 id="code">Code</h3>
+<pre><code class="lang-c++"><span class="hljs-keyword">class</span> Solution4 {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">isSubsequence</span><span class="hljs-params">(<span class="hljs-built_in">string</span> s, <span class="hljs-built_in">string</span> t)</span> </span>{
+        <span class="hljs-keyword">int</span> s_size = s.size(), t_size = t.size();
+        <span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&gt; position(t_size + <span class="hljs-number">1</span>, <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;(<span class="hljs-number">26</span>, <span class="hljs-number">0</span>));
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">26</span>; i++)
+        {
+            position[t_size][i] = t_size;
+        }
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = t_size - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--)
+        {
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">26</span>; j++)
+            {
+                <span class="hljs-keyword">if</span> (t[i] == <span class="hljs-string">&apos;a&apos;</span> + j)
+                {
+                    position[i][j] = i;
+                }
+                <span class="hljs-keyword">else</span>
+                {
+                    position[i][j] = position[i + <span class="hljs-number">1</span>][j];
+                }
+            }
+        }
+
+        <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; s_size; j++)
+        {
+            <span class="hljs-keyword">if</span> (position[i][s[j] - <span class="hljs-string">&apos;a&apos;</span>] == t_size) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+            i = position[i][s[j] - <span class="hljs-string">&apos;a&apos;</span>] + <span class="hljs-number">1</span>;
+        }
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+    }
+};
+</code></pre>
+<h2 id="5&#x975E;&#x9012;&#x51CF;&#x6570;&#x5217;">5.&#x975E;&#x9012;&#x51CF;&#x6570;&#x5217;</h2>
+<p>link:<a href="https://leetcode.cn/problems/non-decreasing-array/description/" target="_blank">665. &#x975E;&#x9012;&#x51CF;&#x6570;&#x5217; - &#x529B;&#x6263;&#xFF08;LeetCode&#xFF09;</a></p>
+<h3 id="description">Description</h3>
+<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x957F;&#x5EA6;&#x4E3A; n &#x7684;&#x6574;&#x6570;&#x6570;&#x7EC4; nums &#xFF0C;&#x8BF7;&#x4F60;&#x5224;&#x65AD;&#x5728; &#x6700;&#x591A; &#x6539;&#x53D8; 1 &#x4E2A;&#x5143;&#x7D20;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8BE5;&#x6570;&#x7EC4;&#x80FD;&#x5426;&#x53D8;&#x6210;&#x4E00;&#x4E2A;&#x975E;&#x9012;&#x51CF;&#x6570;&#x5217;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x662F;&#x8FD9;&#x6837;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x975E;&#x9012;&#x51CF;&#x6570;&#x5217;&#x7684;&#xFF1A; &#x5BF9;&#x4E8E;&#x6570;&#x7EC4;&#x4E2D;&#x4EFB;&#x610F;&#x7684; i (0 &lt;= i &lt;= n-2)&#xFF0C;&#x603B;&#x6EE1;&#x8DB3; nums[i] &lt;= nums[i + 1]&#x3002;</p>
+<p>&#x793A;&#x4F8B; 1:</p>
+<p>&#x8F93;&#x5165;: nums = [4,2,3]
+&#x8F93;&#x51FA;: true
+&#x89E3;&#x91CA;: &#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x628A;&#x7B2C;&#x4E00;&#x4E2A; 4 &#x53D8;&#x6210; 1 &#x6765;&#x4F7F;&#x5F97;&#x5B83;&#x6210;&#x4E3A;&#x4E00;&#x4E2A;&#x975E;&#x9012;&#x51CF;&#x6570;&#x5217;&#x3002;
+&#x793A;&#x4F8B; 2:</p>
+<p>&#x8F93;&#x5165;: nums = [4,2,1]
+&#x8F93;&#x51FA;: false
+&#x89E3;&#x91CA;: &#x4F60;&#x4E0D;&#x80FD;&#x5728;&#x53EA;&#x6539;&#x53D8;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x5C06;&#x5176;&#x53D8;&#x4E3A;&#x975E;&#x9012;&#x51CF;&#x6570;&#x5217;&#x3002;</p>
+<h3 id="solution">Solution</h3>
+<p>&#x672C;&#x9898;&#x7684;&#x9898;&#x76EE;&#x8981;&#x6C42;&#x975E;&#x5E38;&#x660E;&#x4E86;&#xFF0C;&#x5C31;&#x662F;&#x5C1D;&#x8BD5;&#x66F4;&#x6539;&#x81F3;&#x591A;&#x4E00;&#x4E2A;&#x6570;&#xFF0C;&#x4F7F;&#x4E4B;&#x6210;&#x4E3A;&quot;&#x975E;&#x9012;&#x51CF;&#x6570;&#x5217;&quot;&#x3002;&#x672C;&#x9898;&#x7684;&#x7279;&#x8272;&#x662F;&quot;&#x9762;&#x5411;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&quot;&#xFF0C;&#x56E0;&#x4E3A;&#x8981;&#x8003;&#x8651;&#x5230;&#x5404;&#x79CD;&#x60C5;&#x51B5;&#x624D;&#x80FD;&#x8FC7;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x5DF2;&#x7ECF;&#x662F;&#x975E;&#x9012;&#x51CF;&#x6570;&#x5217;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x6211;&#x4EEC;&#x65E0;&#x9700;&#x66F4;&#x6539;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x5176;&#x4ED6;&#x60C5;&#x51B5;&#xFF0C;&#x6211;&#x4EEC;&#x9996;&#x5148;&#x8981;&#x8003;&#x8651;&#x4EC0;&#x4E48;&#x6837;&#x7684;&#x6570;&#x5217;&#x53EF;&#x4EE5;&#x7ECF;&#x8FC7;&#x4E00;&#x6B21;&#x4FEE;&#x6539;&#x53D8;&#x6210;&#x975E;&#x9012;&#x51CF;&#x6570;&#x5217;&#x3002;&#x9996;&#x5148;&#x6211;&#x4EEC;&#x8981;&#x8003;&#x8651;&quot;&#x9012;&#x51CF;&quot;&#x7684;&#x90E8;&#x5206;&#x6700;&#x591A;&#x6709;&#x51E0;&#x5904;&#x3002;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x6570;&#x5217;&#x6709;&#x4E24;&#x5904;&#x9012;&#x51CF;&#x90E8;&#x5206;&#xFF0C;&#x800C;&#x4E14;&#x8FD9;&#x4E24;&#x90E8;&#x5206;&#x4E0D;&#x76F8;&#x90BB;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x4FEE;&#x6539;&#x4EFB;&#x610F;&#x4E00;&#x5904;&#xFF0C;&#x53E6;&#x4E00;&#x5904;&#x90FD;&#x662F;&#x9012;&#x51CF;&#x7684;&#xFF0C;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x53EA;&#x80FD;&#x8FD4;&#x56DE;false,&#x4F8B;&#x5982;:</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wuyun666/chartBed@main/img/image-20220827183800041.png" alt="image-20220827183800041"></p>
+<p>&#x5982;&#x679C;&#x53EA;&#x6709;&#x8FD9;&#x4E24;&#x5904;&#x9012;&#x51CF;&#x90E8;&#x5206;&#x76F8;&#x90BB;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5B58;&#x5728;&#x4E09;&#x4E2A;&#x8FDE;&#x7EED;&#x7684;&#x6570;&#x662F;&#x9012;&#x51CF;&#x7684;&#xFF0C;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x53EF;&#x5426;&#x5904;&#x7406;&#x5462;&#xFF1F;&#x4E5F;&#x4E0D;&#x884C;&#xFF0C;&#x65E0;&#x8BBA;&#x4FEE;&#x6539;&#x4E09;&#x4E2A;&#x6570;&#x4E2D;&#x7684;&#x54EA;&#x4E00;&#x4E2A;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x6570;&#x603B;&#x8981;&#x548C;&#x53E6;&#x4E00;&#x4E2A;&#x6570;&#x6784;&#x6210;&#x9012;&#x51CF;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;<strong>&#x6700;&#x591A;&#x53EA;&#x6709;&#x4E00;&#x5904;&#x9700;&#x8981;&#x4FEE;&#x6539;</strong>&#x3002;</p>
+<p>&#x5982;&#x679C;&#x53EA;&#x6709;&#x4E00;&#x5904;&#x6784;&#x6210;&#x9012;&#x51CF;&#xFF0C;&#x5C31;&#x4E00;&#x5B9A;&#x80FD;&#x591F;&#x53EA;&#x6539;&#x4E00;&#x4E2A;&#x6570;&#x5C31;&#x4F7F;&#x5176;&#x53D8;&#x4E3A;&#x975E;&#x9012;&#x51CF;&#x5417;&#xFF1F;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wuyun666/chartBed@main/img/image-20220827203141468.png" alt="image-20220827203141468"></p>
+<p>&#x6240;&#x4EE5;&#x81F3;&#x4E8E;&#x80FD;&#x4E0D;&#x80FD;&#xFF0C;&#x9996;&#x5148;&#x8003;&#x8651;&#x53D1;&#x751F;&#x9012;&#x51CF;&#x7684;&#x8FD9;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x5982;&#x4E0A;&#x56FE;&#x7684;10&#x548C;2&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6539;&#x53D8;&#x7B2C;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#xFF0C;&#x4F46;&#x8981;&#x4FDD;&#x8BC1;10&#x6539;&#x53D8;&#x540E;&#x8981;&#x4E0D;&#x5C0F;&#x4E8E;&#x5B83;&#x524D;&#x9762;&#x7684;9&#xFF0C;&#x4E5F;&#x8981;&#x4E0D;&#x5927;&#x4E8E;&#x540E;&#x9762;&#x7684;2&#xFF0C;&#x8FD9;&#x663E;&#x7136;&#x662F;&#x4E0D;&#x884C;&#x7684;&#xFF0C;&#x4E0D;&#x80FD;&#x4FDD;&#x8BC1;10&#x540E;&#x9762;&#x7684;&#x5143;&#x7D20;2&#x5927;&#x4E8E;&#x7B49;&#x4E8E;10&#x524D;&#x9762;&#x7684;&#x5143;&#x7D20;9&#xFF1B;&#x6216;&#x8005;&#x4E5F;&#x53EF;&#x4EE5;&#x6539;&#x53D8;&#x7B2C;&#x4E8C;&#x4E2A;&#x6570;&#x5B57;&#xFF0C;&#x4F46;&#x8981;&#x4FDD;&#x8BC1;2&#x6539;&#x53D8;&#x540E;&#x8981;&#x4E0D;&#x5C0F;&#x4E8E;&#x5B83;&#x524D;&#x9762;&#x7684;10&#xFF0C;&#x4E5F;&#x8981;&#x4E0D;&#x5927;&#x4E8E;&#x5B83;&#x540E;&#x9762;&#x7684;3&#xFF0C;&#x8FD9;&#x4E5F;&#x4E0D;&#x80FD;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#xFF0C;&#x56E0;&#x4E3A;2&#x524D;&#x9762;&#x7684;10&#x5927;&#x4E8E;2&#x540E;&#x9762;&#x7684;3&#x3002;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5BF9;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x4ECE;&#x524D;&#x5411;&#x540E;&#x904D;&#x5386;&#xFF0C;&#x5982;&#x679C;&#x53D1;&#x73B0;&#x9012;&#x51CF;&#x7684;&#x90E8;&#x5206;&#xFF0C;&#x5C31;&#x5206;&#x522B;&#x5224;&#x65AD;&#x8FD9;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x524D;&#x540E;&#x5143;&#x7D20;&#x662F;&#x5426;&#x7B26;&#x5408;&#x4FEE;&#x6539;&#x6761;&#x4EF6;&#xFF0C;&#x5982;&#x679C;&#x4E24;&#x4E2A;&#x4FEE;&#x6539;&#x6761;&#x4EF6;&#x90FD;&#x4E0D;&#x7B26;&#x5408;&#xFF0C;&#x90A3;&#x4E48;&#x8FD4;&#x56DE;false&#xFF1B;&#x5982;&#x679C;&#x9012;&#x51CF;&#x7684;&#x90E8;&#x5206;&#x591A;&#x4E8E;2&#x5904;&#xFF0C;&#x4E5F;&#x8FD4;&#x56DE;false&#x3002;</p>
+<h3 id="code">Code</h3>
+<pre><code class="lang-c++"><span class="hljs-keyword">class</span> Solution {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">checkPossibility</span><span class="hljs-params">(<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; nums)</span> </span>{
+        <span class="hljs-keyword">int</span> length = nums.size(), count = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; length<span class="hljs-number">-1</span>; i++)
+        {   
+            <span class="hljs-keyword">int</span> num1 = nums[i], num2 = nums[i + <span class="hljs-number">1</span>];
+            <span class="hljs-keyword">if</span> (num1 &gt; num2)
+            {
+                count++;
+                <span class="hljs-keyword">if</span> (count &gt; <span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+               <span class="hljs-keyword">if</span> ((i &gt; <span class="hljs-number">0</span> &amp;&amp; nums[i + <span class="hljs-number">1</span>] &lt; nums[i - <span class="hljs-number">1</span>]) &amp;&amp; (i + <span class="hljs-number">2</span> &lt; length &amp;&amp; nums[i] &gt; nums[i + <span class="hljs-number">2</span>])) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+            }
+        }
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+    }
+};
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../03-排序/01-排序问题.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 排序问题">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"贪心算法","level":"5.1","depth":1,"previous":{"title":"排序问题","level":"4.1","depth":1,"path":"03-排序/01-排序问题.md","ref":"03-排序/01-排序问题.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"04-贪心算法/01-贪心算法.md","mtime":"2022-08-27T13:13:32.556Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-29T08:15:20.633Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,835 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>堆 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../01-枚举部分和递归部分/01-递归实现指数型枚举.html" />
+    
+    
+    <link rel="prev" href="05-图.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">数据结构和算法基础</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01-数组和字符串.html">
+            
+                <a href="01-数组和字符串.html">
+            
+                    
+                    数组和字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="02-链表.html">
+            
+                <a href="02-链表.html">
+            
+                    
+                    链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="03-栈和队列.html">
+            
+                <a href="03-栈和队列.html">
+            
+                    
+                    栈和队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="04-树.html">
+            
+                <a href="04-树.html">
+            
+                    
+                    树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="05-图.html">
+            
+                <a href="05-图.html">
+            
+                    
+                    图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="06-堆.html">
+            
+                <a href="06-堆.html">
+            
+                    
+                    堆
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">枚举部分和递归部分</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../01-枚举部分和递归部分/01-递归实现指数型枚举.html">
+            
+                <a href="../01-枚举部分和递归部分/01-递归实现指数型枚举.html">
+            
+                    
+                    递归实现指数型枚举
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../01-枚举部分和递归部分/02-递归实现排列类型枚举 II.html">
+            
+                <a href="../01-枚举部分和递归部分/02-递归实现排列类型枚举 II.html">
+            
+                    
+                    递归实现排列类型枚举 II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../01-枚举部分和递归部分/03-递归实现组合型枚举 Ⅱ.html">
+            
+                <a href="../01-枚举部分和递归部分/03-递归实现组合型枚举 Ⅱ.html">
+            
+                    
+                    递归实现组合型枚举 Ⅱ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../01-枚举部分和递归部分/04-最大的和.html">
+            
+                <a href="../01-枚举部分和递归部分/04-最大的和.html">
+            
+                    
+                    最大的和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../01-枚举部分和递归部分/05-导弹拦截.html">
+            
+                <a href="../01-枚举部分和递归部分/05-导弹拦截.html">
+            
+                    
+                    导弹拦截
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../01-枚举部分和递归部分/06-珠心算测验.html">
+            
+                <a href="../01-枚举部分和递归部分/06-珠心算测验.html">
+            
+                    
+                    珠心算测验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../01-枚举部分和递归部分/07-龙虎斗.html">
+            
+                <a href="../01-枚举部分和递归部分/07-龙虎斗.html">
+            
+                    
+                    龙虎斗
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../01-枚举部分和递归部分/08-侦探推理.html">
+            
+                <a href="../01-枚举部分和递归部分/08-侦探推理.html">
+            
+                    
+                    侦探推理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../01-枚举部分和递归部分/09-卡米洛特.html">
+            
+                <a href="../01-枚举部分和递归部分/09-卡米洛特.html">
+            
+                    
+                    卡米洛特
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="../01-枚举部分和递归部分/10-三元组.html">
+            
+                <a href="../01-枚举部分和递归部分/10-三元组.html">
+            
+                    
+                    三元组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">双指针思想</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../02-双指针思想/01-双指针.html">
+            
+                <a href="../02-双指针思想/01-双指针.html">
+            
+                    
+                    双指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">排序</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../03-排序/01-排序问题.html">
+            
+                <a href="../03-排序/01-排序问题.html">
+            
+                    
+                    排序问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">贪心算法</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../04-贪心算法/01-贪心算法.html">
+            
+                <a href="../04-贪心算法/01-贪心算法.html">
+            
+                    
+                    贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">分治</li>
+        
+        
+    
+
+    
+        
+        <li class="header">搜索和回溯</li>
+        
+        
+    
+
+    
+        
+        <li class="header">并查集</li>
+        
+        
+    
+
+    
+        
+        <li class="header">动态规划</li>
+        
+        
+    
+
+    
+        
+        <li class="header">数学知识</li>
+        
+        
+    
+
+    
+        
+        <li class="header">图论</li>
+        
+        
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >堆</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x5806;&#x662F;&#x4E00;&#x79CD;&#x7279;&#x6B8A;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x4E5F;&#x53EB;&#x4F5C;&#x4F18;&#x5148;&#x961F;&#x5217;&#xFF0C;&#x5806;&#x6709;&#x8BB8;&#x8BB8;&#x591A;&#x591A;&#x7684;&#x6F14;&#x5316;&#x7ED3;&#x6784;&#xFF0C;&#x5982;treap&#x3001;&#x53CC;&#x7AEF;&#x4F18;&#x5148;&#x961F;&#x5217;&#x7B49;&#xFF0C;&#x5806;&#x7684;&#x4F7F;&#x7528;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#xFF0C;&#x8FD9;&#x91CC;&#x7528;&#x51E0;&#x9053;&#x4F8B;&#x9898;&#x6765;&#x5C1D;&#x8BD5;&#x7406;&#x89E3;&#x3002;</p>
+<h2 id="1&#x6570;&#x7EC4;&#x4E2D;&#x7B2C;k&#x5927;&#x7684;&#x6570;&#x5B57;">1.&#x6570;&#x7EC4;&#x4E2D;&#x7B2C;k&#x5927;&#x7684;&#x6570;&#x5B57;</h2>
+<p>link:<a href="https://leetcode.cn/problems/xx4gT2/" target="_blank">&#x5251;&#x6307; Offer II 076. &#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x7B2C; k &#x5927;&#x7684;&#x6570;&#x5B57; - &#x529B;&#x6263;&#xFF08;LeetCode&#xFF09;</a></p>
+<h3 id="description">Description</h3>
+<p>&#x7ED9;&#x5B9A;&#x6574;&#x6570;&#x6570;&#x7EC4; <code>nums</code> &#x548C;&#x6574;&#x6570; <code>k</code>&#xFF0C;&#x8BF7;&#x8FD4;&#x56DE;&#x6570;&#x7EC4;&#x4E2D;&#x7B2C; k &#x4E2A;&#x6700;&#x5927;&#x7684;&#x5143;&#x7D20;&#x3002;</p>
+<p>&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x627E;&#x7684;&#x662F;&#x6570;&#x7EC4;&#x6392;&#x5E8F;&#x540E;&#x7684;&#x7B2C; <code>k</code> &#x4E2A;&#x6700;&#x5927;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x7B2C; <code>k</code> &#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x5143;&#x7D20;&#x3002;</p>
+<p>&#x793A;&#x4F8B; 1:</p>
+<p>&#x8F93;&#x5165;: [3,2,1,5,6,4] &#x548C; k = 2
+&#x8F93;&#x51FA;: 5
+&#x793A;&#x4F8B; 2:</p>
+<p>&#x8F93;&#x5165;: [3,2,3,1,2,4,5,5,6] &#x548C; k = 4
+&#x8F93;&#x51FA;: 4</p>
+<h3 id="solution">Solution</h3>
+<p>&#x5806;&#x6392;&#x5E8F;&#x5E38;&#x8003;&#x7684;&#x6392;&#x5E8F;&#x65B9;&#x6CD5;&#xFF0C;&#x5176;&#x4E2D;&#x7684;&#x601D;&#x60F3;&#x65B9;&#x6CD5;&#x4E5F;&#x975E;&#x5E38;&#x503C;&#x5F97;&#x6211;&#x4EEC;&#x5B66;&#x4E60;&#x3002;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x5E76;&#x4E0D;&#x9700;&#x8981;&#x5B8C;&#x5168;&#x6392;&#x5217;&#x8FD9;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x627E;&#x51FA;&#x7B2C;k&#x5927;&#x7684;&#x5143;&#x7D20;&#x5373;&#x53EF;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x57FA;&#x4E8E;&#x5806;&#x6392;&#x5E8F;&#x7684;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x6539;&#x8FDB;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x5927;&#x6839;&#x5806;&#xFF0C;&#x7136;&#x540E;&#x53BB;&#x6389;k-1&#x4E2A;&#x5143;&#x7D20;&#x5C31;&#x597D;&#x4E86;&#x3002;&#x672C;&#x9898;&#x6709;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;&#x7EBF;&#x6027;&#x7684;&#x7B97;&#x6CD5;&#xFF1A;&#x5FEB;&#x901F;&#x9009;&#x62E9;&#x7B97;&#x6CD5;&#xFF0C;&#x5C06;&#x5728;&#x540E;&#x9762;&#x7684;&#x7AE0;&#x8282;&quot;&#x6392;&#x5E8F;&quot;&#x4ECB;&#x7ECD;&#x3002;&#x6784;&#x5EFA;&#x5806;&#x6709;&#x4E09;&#x4E2A;&#x4E3B;&#x8981;&#x7684;&#x8FC7;&#x7A0B;&#xFF1A;&#x6DFB;&#x52A0;&#x5143;&#x7D20;&#x3001;&#x8C03;&#x6574;&#x7ED3;&#x6784;&#x3001;&#x5220;&#x9664;&#x5143;&#x7D20;&#xFF0C;&#x521B;&#x5EFA;&#x5806;&#x6B63;&#x662F;&#x57FA;&#x4E8E;&#x8FD9;&#x4E9B;&#x57FA;&#x672C;&#x64CD;&#x4F5C;&#x3002;&#x5173;&#x4E8E;&#x5806;&#x7684;&#x4ECB;&#x7ECD;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#xFF1A;<a href="https://blog.csdn.net/qq_54169998/article/details/121098648" target="_blank">(19&#x6761;&#x6D88;&#x606F;) C++&#x6570;&#x636E;&#x7ED3;&#x6784;&#x8BE6;&#x89E3;&#x2014;&#x2014;&#x5806;_&#x9738;&#x9053;&#x5C0F;&#x660E;&#x7684;&#x535A;&#x5BA2;-CSDN&#x535A;&#x5BA2;_c++ &#x5806;</a>&#x3002;</p>
+<h3 id="code">Code</h3>
+<pre><code class="lang-c++"><span class="hljs-keyword">class</span> Solution1 {
+<span class="hljs-keyword">public</span>:
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">siftHeap</span><span class="hljs-params">(<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; nums, <span class="hljs-keyword">int</span> index, <span class="hljs-keyword">int</span> heapSize)</span>
+    </span>{
+        <span class="hljs-keyword">int</span> left = index * <span class="hljs-number">2</span> + <span class="hljs-number">1</span>, right = index * <span class="hljs-number">2</span> + <span class="hljs-number">2</span>;
+        <span class="hljs-keyword">int</span> largest = index;
+        <span class="hljs-comment">//compare with left and right,select the largest element in [index,left,right]</span>
+        <span class="hljs-keyword">if</span> (left&lt;heapSize &amp;&amp; nums[left]&gt;nums[largest])
+            largest = left;
+        <span class="hljs-keyword">if</span> (right &lt; heapSize &amp;&amp; nums[right] &gt; nums[largest])
+            largest = right;
+        <span class="hljs-keyword">if</span> (largest != index) 
+        {
+            swap(nums[largest], nums[index]);
+            siftHeap(nums, largest, heapSize);
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">buildHeap</span><span class="hljs-params">(<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; nums, <span class="hljs-keyword">int</span> heapSize)</span>
+    </span>{
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = heapSize / <span class="hljs-number">2</span>; i &gt;= <span class="hljs-number">0</span>; i--)
+        {
+            siftHeap(nums, i, heapSize);
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">findKthLargest</span><span class="hljs-params">(<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; nums, <span class="hljs-keyword">int</span> k)</span> </span>{
+        <span class="hljs-keyword">int</span> heapSize = nums.size();
+        buildHeap(nums, heapSize);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = nums.size() <span class="hljs-number">-1</span>; i &gt;= nums.size() +<span class="hljs-number">1</span>-k; i--)
+        {
+            swap(nums[<span class="hljs-number">0</span>], nums[i]);
+            heapSize--;
+            siftHeap(nums, <span class="hljs-number">0</span>, heapSize);
+        }
+        <span class="hljs-keyword">return</span> nums[<span class="hljs-number">0</span>];
+    }
+};
+</code></pre>
+<h2 id="2&#x6700;&#x63A5;&#x8FD1;&#x539F;&#x70B9;&#x7684;k&#x4E2A;&#x70B9;">2.&#x6700;&#x63A5;&#x8FD1;&#x539F;&#x70B9;&#x7684;K&#x4E2A;&#x70B9;</h2>
+<p>link:<a href="https://leetcode.cn/problems/k-closest-points-to-origin/" target="_blank">973. &#x6700;&#x63A5;&#x8FD1;&#x539F;&#x70B9;&#x7684; K &#x4E2A;&#x70B9; - &#x529B;&#x6263;&#xFF08;LeetCode&#xFF09;</a></p>
+<h3 id="description">Description</h3>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x6570;&#x7EC4; points &#xFF0C;&#x5176;&#x4E2D;$ points[i] = [x_i, y_i]$ &#x8868;&#x793A; X-Y &#x5E73;&#x9762;&#x4E0A;&#x7684;&#x4E00;&#x4E2A;&#x70B9;&#xFF0C;&#x5E76;&#x4E14;&#x662F;&#x4E00;&#x4E2A;&#x6574;&#x6570; k &#xFF0C;&#x8FD4;&#x56DE;&#x79BB;&#x539F;&#x70B9; (0,0) &#x6700;&#x8FD1;&#x7684; k &#x4E2A;&#x70B9;&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#xFF0C;&#x5E73;&#x9762;&#x4E0A;&#x4E24;&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x8DDD;&#x79BB;&#x662F; &#x6B27;&#x51E0;&#x91CC;&#x5FB7;&#x8DDD;&#x79BB;&#xFF08; &#x221A;(x1 - x2)2 + (y1 - y2)2 &#xFF09;&#x3002;</p>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x6309; &#x4EFB;&#x4F55;&#x987A;&#x5E8F; &#x8FD4;&#x56DE;&#x7B54;&#x6848;&#x3002;&#x9664;&#x4E86;&#x70B9;&#x5750;&#x6807;&#x7684;&#x987A;&#x5E8F;&#x4E4B;&#x5916;&#xFF0C;&#x7B54;&#x6848; &#x786E;&#x4FDD; &#x662F; &#x552F;&#x4E00; &#x7684;&#x3002;</p>
+<p>&#x793A;&#x4F8B; 1&#xFF1A;</p>
+<p><img src="https://assets.leetcode.com/uploads/2021/03/03/closestplane1.jpg" alt="img"></p>
+<p>&#x8F93;&#x5165;&#xFF1A;points = [[1,3],[-2,2]], k = 1
+&#x8F93;&#x51FA;&#xFF1A;[[-2,2]]
+&#x89E3;&#x91CA;&#xFF1A; 
+(1, 3) &#x548C;&#x539F;&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x8DDD;&#x79BB;&#x4E3A; sqrt(10)&#xFF0C;
+(-2, 2) &#x548C;&#x539F;&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x8DDD;&#x79BB;&#x4E3A; sqrt(8)&#xFF0C;
+&#x7531;&#x4E8E; sqrt(8) &lt; sqrt(10)&#xFF0C;(-2, 2) &#x79BB;&#x539F;&#x70B9;&#x66F4;&#x8FD1;&#x3002;
+&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x8DDD;&#x79BB;&#x539F;&#x70B9;&#x6700;&#x8FD1;&#x7684; K = 1 &#x4E2A;&#x70B9;&#xFF0C;&#x6240;&#x4EE5;&#x7B54;&#x6848;&#x5C31;&#x662F; [[-2,2]]&#x3002;</p>
+<h3 id="solution">Solution</h3>
+<p>&#x672C;&#x9898;&#x4E0E;&#x4E0A;&#x4E00;&#x9053;&#x9898;&#x5927;&#x540C;&#x5C0F;&#x5F02;&#xFF0C;&#x5728;&#x5B9E;&#x9645;&#x7684;&#x89E3;&#x9898;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;c++&#x63D0;&#x4F9B;&#x7684;&#x4F18;&#x5148;&#x961F;&#x5217;&#x7684;api&#x6765;&#x4F7F;&#x7528;&#x5927;&#x6839;&#x5806;&#x6216;&#x5C0F;&#x6839;&#x5806;&#xFF0C;&#x672C;&#x9898;&#x5C1D;&#x8BD5;&#x4F7F;&#x7528;&#x8BE5;api&#x6765;&#x89E3;&#x9898;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6784;&#x5EFA;</p>
+<h3 id="code">Code</h3>
+<pre><code class="lang-c++"><span class="hljs-keyword">class</span> Solution2 {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&gt; kClosest(<span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&gt;&amp; points, <span class="hljs-keyword">int</span> k) {
+        <span class="hljs-comment">//cmp function for heap</span>
+        <span class="hljs-keyword">struct</span> cmp { <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">operator</span><span class="hljs-params">()</span><span class="hljs-params">(pair&lt;<span class="hljs-keyword">int</span>, <span class="hljs-keyword">int</span>&gt; a, pair&lt;<span class="hljs-keyword">int</span>, <span class="hljs-keyword">int</span>&gt; b)</span> </span>{ <span class="hljs-keyword">return</span> a.first &gt; b.first; } };
+        priority_queue&lt;pair&lt;<span class="hljs-keyword">int</span>,<span class="hljs-keyword">int</span>&gt;,<span class="hljs-built_in">vector</span>&lt;pair&lt;<span class="hljs-keyword">int</span>, <span class="hljs-keyword">int</span>&gt;&gt;,cmp&gt; heap;<span class="hljs-comment">//&lt;distance^2,index&gt;</span>
+        <span class="hljs-keyword">int</span> num = points.size();
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; num; i++)
+        {
+            <span class="hljs-keyword">int</span> distance = points[i][<span class="hljs-number">0</span>] * points[i][<span class="hljs-number">0</span>] + points[i][<span class="hljs-number">1</span>] * points[i][<span class="hljs-number">1</span>];
+            heap.emplace(distance, i);
+        }
+        <span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&gt; result = {};
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; k; i++)
+        {
+            result.push_back(points[heap.top().second]);
+            heap.pop();
+        }
+        <span class="hljs-keyword">return</span> result;
+    }
+};
+</code></pre>
+<h2 id="&#x6269;&#x5C55;&#x9898;&#xFF1A;double-queue">&#x6269;&#x5C55;&#x9898;&#xFF1A;double queue</h2>
+<p>link:<a href="http://poj.org/problem?id=3481" target="_blank">3481 -- Double Queue (poj.org)</a></p>
+<h3 id="description">Description</h3>
+<p>Description</p>
+<p>The new founded Balkan Investment Group Bank (BIG-Bank) opened a new office in Bucharest, equipped with a modern computing environment provided by IBM Romania, and using modern information technologies. As usual, each client of the bank is identified by a positive integer <em>K</em> and, upon arriving to the bank for some services, he or she receives a positive integer priority <em>P</em>. One of the inventions of the young managers of the bank shocked the software engineer of the serving system. They proposed to break the tradition by sometimes calling the serving desk with the <strong>lowest</strong> priority instead of that with the highest priority. Thus, the system will receive the following types of request:</p>
+<table>
+<thead>
+<tr>
+<th>0</th>
+<th>The system needs to stop serving</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 <em>K</em> <em>P</em></td>
+<td>Add client <em>K</em> to the waiting list with priority <em>P</em></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Serve the client with the highest priority and drop him or her from the waiting list</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Serve the client with the lowest priority and drop him or her from the waiting list</td>
+</tr>
+</tbody>
+</table>
+<p>Your task is to help the software engineer of the bank by writing a program to implement the requested serving policy.</p>
+<p>Input</p>
+<p>Each line of the input contains one of the possible requests; only the last line contains the stop-request (code 0). You may assume that when there is a request to include a new client in the list (code 1), there is no other request in the list of the same client or with the same priority. An identifier <em>K</em> is always less than 106, and a priority <em>P</em> is less than 107. The client may arrive for being served multiple times, and each time may obtain a different priority.</p>
+<p>Output</p>
+<p>For each request with code 2 or 3, the program has to print, in a separate line of the standard output, the identifier of the served client. If the request arrives when the waiting list is empty, then the program prints zero (0) to the output.</p>
+<p>Sample Input</p>
+<pre><code>2
+1 20 14
+1 30 3
+2
+1 10 99
+3
+2
+2
+0
+</code></pre><p>Sample Output</p>
+<pre><code>0
+20
+30
+10
+0
+</code></pre><h3 id="solution">Solution</h3>
+<p>&#x672C;&#x9898;&#x770B;&#x4F3C;&#x590D;&#x6742;&#xFF0C;&#x4F46;&#x662F;&#x5B9E;&#x9645;&#x4E0A;&#x53EA;&#x9700;&#x8981;&#x80FD;&#x591F;&#x627E;&#x5230;&#x5F53;&#x524D;&#x6700;&#x5C0F;&#x4F18;&#x5148;&#x7EA7;&#x7684;&#x8282;&#x70B9;&#x6700;&#x9AD8;&#x4F18;&#x5148;&#x7EA7;&#x7684;&#x8282;&#x70B9;&#x5373;&#x53EF;&#x3002;&#x5BB9;&#x6613;&#x60F3;&#x5230;&#x7684;&#x662F;&#x53EF;&#x4EE5;&#x7528;&#x4E24;&#x4E2A;&#x5806;&#xFF0C;&#x4E00;&#x4E2A;&#x5927;&#x8DDF;&#x5806;&#x4E00;&#x4E2A;&#x5C0F;&#x6839;&#x5806;&#x6765;&#x7EF4;&#x62A4;&#x3002;&#x6570;&#x7EC4;&#x7684;&#x8BDD;&#x5C31;&#x4E0D;&#x8981;&#x60F3;&#x4E86;&#xFF0C;&#x80AF;&#x5B9A;&#x4F1A;&#x8D85;&#x65F6;&#x3002;&#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x53CC;&#x7AEF;&#x5806;&#x6216;&#x8005;treap&#x6765;&#x89E3;&#x51B3;&#x95EE;&#x9898;&#x3002;&#x4E24;&#x79CD;&#x6570;&#x636E;&#x7ED3;&#x6784;c++&#x90FD;&#x6CA1;&#x6709;&#x63D0;&#x4F9B;api&#xFF0C;&#x53EA;&#x80FD;&#x81EA;&#x5DF1;&#x5B9E;&#x73B0;&#xFF0C;&#x800C;&#x4E14;&#x5B9E;&#x73B0;&#x8D77;&#x6765;&#x786E;&#x5B9E;&#x633A;&#x590D;&#x6742;&#x7684;&#x3002;</p>
+<pre><code class="lang-c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;algorithm&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+<span class="hljs-comment">/*
+* &#x672C;&#x9898;&#x5E94;&#x5F53;&#x91C7;&#x7528;treap&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;
+* treap&#x7684;&#x672C;&#x8D28;&#x662F;&#x6570;&#x636E;&#x7528;&#x4E8C;&#x53C9;&#x5E73;&#x8861;&#x6811;&#x83B7;&#x53D6;&#xFF0C;&#x91C7;&#x7528;&#x968F;&#x673A;&#x6570;&#x6765;&#x7EF4;&#x62A4;&#x5806;
+* &#x4F46;&#x662F;&#x56E0;&#x4E3A;&#x76F4;&#x63A5;&#x91C7;&#x7528;&#x4E8C;&#x53C9;&#x94FE;&#x8868;&#x7684;&#x65B9;&#x6CD5;&#x4F1A;&#x5BFC;&#x81F4;&#x8D85;&#x65F6;&#xFF0C;&#x6240;&#x4EE5;&#x5C06;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x6539;&#x4E3A;&#x4F7F;&#x7528;&#x7D22;&#x5F15;&#x6570;&#x7EC4;
+*/</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAX 500010</span>
+<span class="hljs-keyword">struct</span> Node {
+    <span class="hljs-keyword">int</span> K;
+    <span class="hljs-keyword">int</span> P;
+    <span class="hljs-keyword">int</span> random;
+    <span class="hljs-keyword">int</span> left, right;    <span class="hljs-comment">//&#x5229;&#x7528;&#x503C;&#x662F;&#x5426;&#x4E3A;0&#x6765;&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x53F6;&#x5B50;&#x8282;&#x70B9;</span>
+    <span class="hljs-keyword">int</span> size;
+    <span class="hljs-keyword">int</span> countK;
+} nodes[MAX];
+<span class="hljs-keyword">int</span> index = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">int</span> root;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getNewNode</span><span class="hljs-params">(<span class="hljs-keyword">int</span> k, <span class="hljs-keyword">int</span> p)</span> </span>{
+    nodes[++index].K = k;
+    nodes[index].P = p;
+    nodes[index].random = rand();
+    nodes[index].countK = nodes[index].size = <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">return</span> index;
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">addSize</span><span class="hljs-params">(<span class="hljs-keyword">int</span> no)</span> </span>{
+    nodes[no].size = nodes[nodes[no].left].size + nodes[nodes[no].right].size + nodes[no].countK;
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">init</span><span class="hljs-params">()</span> </span>{
+    getNewNode(<span class="hljs-number">0</span> ,<span class="hljs-number">-0x3f3f3f3f</span>);    <span class="hljs-comment">//1</span>
+    getNewNode(<span class="hljs-number">0</span>, <span class="hljs-number">0x3f3f3f3f</span>);    <span class="hljs-comment">//2</span>
+    root = <span class="hljs-number">1</span>;
+    nodes[<span class="hljs-number">1</span>].right = <span class="hljs-number">2</span>;
+    addSize(<span class="hljs-number">1</span>);                    <span class="hljs-comment">//1&#x662F;&#x7236;&#x8282;&#x70B9;</span>
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">rotateRight</span><span class="hljs-params">(<span class="hljs-keyword">int</span> &amp;node)</span> </span>{
+    <span class="hljs-keyword">int</span> temp = nodes[node].left;
+    nodes[node].left = nodes[temp].right;
+    nodes[temp].right = node;
+    node = temp;
+    <span class="hljs-comment">//&#x5FC5;&#x987B;&#x4ECE;&#x4E0B;&#x5411;&#x4E0A;&#x8BA1;&#x7B97;size&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x51FA;&#x9519;</span>
+    addSize(nodes[node].right);
+    addSize(node);
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">rotateLeft</span><span class="hljs-params">(<span class="hljs-keyword">int</span>&amp; node)</span> </span>{
+    <span class="hljs-keyword">int</span> temp = nodes[node].right;
+    nodes[node].right = nodes[temp].left;
+    nodes[temp].left = node;
+    node = temp;
+    addSize(nodes[node].left);
+    addSize(node);
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">insert</span><span class="hljs-params">(<span class="hljs-keyword">int</span>&amp; node, <span class="hljs-keyword">int</span> k, <span class="hljs-keyword">int</span> p)</span> </span>{
+    <span class="hljs-keyword">if</span> (!node) {
+        node = getNewNode(k, p);
+        <span class="hljs-keyword">return</span>;
+    }
+    <span class="hljs-keyword">if</span> (nodes[node].P == p)nodes[node].countK++;
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (p &lt; nodes[node].P) {
+        insert(nodes[node].left, k, p);
+        <span class="hljs-keyword">if</span> (nodes[nodes[node].left].random &gt; nodes[node].random) rotateRight(node);
+    }
+    <span class="hljs-keyword">else</span>
+    {
+        insert(nodes[node].right, k, p);
+        <span class="hljs-keyword">if</span> (nodes[nodes[node].right].random &gt; nodes[node].random) rotateLeft(node);
+    }
+    addSize(node);    <span class="hljs-comment">//&#x91CD;&#x65B0;&#x8BA1;&#x7B97;node&#x7684;size&#x503C;</span>
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">remove</span><span class="hljs-params">(<span class="hljs-keyword">int</span>&amp; node, <span class="hljs-keyword">int</span> p)</span> </span>{
+    <span class="hljs-keyword">if</span> (!node) <span class="hljs-keyword">return</span>;
+    <span class="hljs-keyword">if</span> (nodes[node].P == p) {
+        <span class="hljs-keyword">if</span> (nodes[node].countK &gt; <span class="hljs-number">1</span>) nodes[node].countK--;
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nodes[node].left == <span class="hljs-number">0</span> &amp;&amp; nodes[node].right == <span class="hljs-number">0</span>) {
+            node = <span class="hljs-number">0</span>;
+        }
+        <span class="hljs-keyword">else</span>
+        {
+            <span class="hljs-keyword">if</span> (nodes[node].left == <span class="hljs-number">0</span> || nodes[nodes[node].right].random &gt; nodes[nodes[node].left].random) {
+                rotateLeft(node);
+                remove(nodes[node].left, p);    <span class="hljs-comment">//&#x539F;&#x5148;&#x7684;&#x7ED3;&#x70B9;&#x5230;&#x4E86;&#x5DE6;&#x5206;&#x652F;&#x4E0A;</span>
+            }
+            <span class="hljs-keyword">else</span>
+            {
+                rotateRight(node);
+                remove(nodes[node].right, p);    <span class="hljs-comment">//&#x53F3;&#x65CB;&#x540E;&#x539F;&#x5148;&#x7684;&#x8282;&#x70B9;&#x5230;&#x4E86;&#x53F3;&#x5206;&#x652F;&#x4E0A;</span>
+            }
+        }
+    }
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nodes[node].P &gt; p) remove(nodes[node].left, p);
+    <span class="hljs-keyword">else</span> remove(nodes[node].right, p);
+    addSize(node);
+}
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getPbyPos</span><span class="hljs-params">(<span class="hljs-keyword">int</span> node, <span class="hljs-keyword">int</span> pos)</span> </span>{
+    <span class="hljs-keyword">if</span> (!node) <span class="hljs-keyword">return</span> <span class="hljs-number">0x3f3f3f3f</span>;
+    <span class="hljs-keyword">if</span> (nodes[nodes[node].left].size &gt;= pos) <span class="hljs-keyword">return</span> getPbyPos(nodes[node].left, pos);
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nodes[nodes[node].left].size + nodes[node].countK &gt;= pos) {
+        <span class="hljs-built_in">cout</span> &lt;&lt; nodes[node].K &lt;&lt; <span class="hljs-built_in">endl</span>;
+        <span class="hljs-keyword">return</span> nodes[node].P;
+    }
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> getPbyPos(nodes[node].right, pos - nodes[nodes[node].left].size - nodes[node].countK);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    index = <span class="hljs-number">0</span>;
+    init();
+    <span class="hljs-keyword">int</span> op;
+    <span class="hljs-keyword">int</span> totalNum = <span class="hljs-number">2</span>;
+    <span class="hljs-keyword">int</span> k, p;
+    <span class="hljs-keyword">while</span> (<span class="hljs-built_in">cin</span> &gt;&gt; op,op) {
+    <span class="hljs-keyword">if</span> (op == <span class="hljs-number">1</span>) {
+            <span class="hljs-built_in">cin</span> &gt;&gt; k &gt;&gt; p;
+            insert(root, k, p);
+            totalNum++;
+        }
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (op == <span class="hljs-number">2</span>) {
+            <span class="hljs-keyword">if</span> (totalNum == <span class="hljs-number">2</span>)<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-number">0</span> &lt;&lt; <span class="hljs-built_in">endl</span>;
+            <span class="hljs-keyword">else</span>
+            {
+                p = getPbyPos(root, totalNum<span class="hljs-number">-1</span>);
+                remove(root, p);
+                totalNum--;
+            }
+        }
+        <span class="hljs-keyword">else</span>
+        {
+            <span class="hljs-keyword">if</span> (totalNum == <span class="hljs-number">2</span>)<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-number">0</span> &lt;&lt; <span class="hljs-built_in">endl</span>;
+            <span class="hljs-keyword">else</span>
+            {
+                p = getPbyPos(root, <span class="hljs-number">2</span>);
+                remove(root, p);
+                totalNum--;
+            }
+        }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="05-图.html" class="navigation navigation-prev " aria-label="Previous page: 图">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../01-枚举部分和递归部分/01-递归实现指数型枚举.html" class="navigation navigation-next " aria-label="Next page: 递归实现指数型枚举">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"堆","level":"1.7","depth":1,"next":{"title":"递归实现指数型枚举","level":"2.1","depth":1,"path":"01-枚举部分和递归部分/01-递归实现指数型枚举.md","ref":"01-枚举部分和递归部分/01-递归实现指数型枚举.md","articles":[]},"previous":{"title":"图","level":"1.6","depth":1,"path":"00-数据结构和算法基础/05-图.md","ref":"00-数据结构和算法基础/05-图.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"00-数据结构和算法基础/06-堆.md","mtime":"2022-08-22T08:27:21.049Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-29T08:15:20.633Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
